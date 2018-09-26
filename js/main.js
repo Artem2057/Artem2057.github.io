@@ -12,6 +12,26 @@
 // 		} 
 // 	}
 // }
+function home_one() {
+    for(var i = 1; i <= 5; i++) {
+     alert(i);
+    }
+}
+
+
+function home_two() {
+     for(var j = 4; j >= 0; j--){
+         alert(j);
+    }
+}
+
+function home_three() {
+    var three = 3;
+    for(var k = 1; k <= 10; k++) {
+        alert(three * k);
+    }
+}
+
 
 var tabs = document.getElementsByClassName('tab');
 var tab = document.getElementsByClassName('tab'); 
