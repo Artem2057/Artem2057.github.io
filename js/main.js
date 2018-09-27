@@ -12,6 +12,19 @@
 // 		} 
 // 	}
 // }
+function pal (str, event) {
+    str = str.toLowerCase();
+
+    if(str.split('').reverse().join('') == str) {
+        console.log('Yes');
+    } else {
+        console.log('No');
+    }
+}
+
+pal('боб');
+
+
 function home_one() {
     for(var i = 1; i <= 5; i++) {
      alert(i);
@@ -34,7 +47,6 @@ function home_three() {
 
 
 var tabs = document.getElementsByClassName('tab');
-var tab = document.getElementsByClassName('tab'); 
 var tabItemContent = document.getElementsByClassName('tab-item-content');
 var bodyClass = document.querySelector('body');
 
@@ -51,13 +63,10 @@ function hideTabsContent(activeTab) {
 function showNextTab(event) {
     var target = event.target;
     if (target.className == 'tab') { // Делаем дополнительную проверку на класс tab
-     	for (var i = 0; i < tab.length; i++) { // Запускаем цикл
-            if (target == tab[i]) { // Если текущий таб равен табу с таким номером, то идём дальше
+     	for (var i = 0; i < tabs.length; i++) { // Запускаем цикл
+            if (target == tabs[i]) { // Если текущий таб равен табу с таким номером, то идём дальше
                 showTabsContent(i); // Показываем контент
-                bodyClass.classList.remove("bg-1"); // Скрываем все градиенты
-                bodyClass.classList.remove("bg-2"); // Скрываем все градиенты
-                bodyClass.classList.remove("bg-3"); // Скрываем все градиенты
-                bodyClass.classList.remove("bg-4"); // Скрываем все градиенты
+                deleteBackground();
                 bodyClass.classList.add("bg-" + i); // И показываем нужный
 		    }
 	    }
@@ -69,6 +78,12 @@ function showTabsContent(currentTabContent){
         hideTabsContent(0); // Скрываем все авто
         tabItemContent[currentTabContent].classList.remove('hide'); // Удаляем у них класс hide
         tabItemContent[currentTabContent].classList.add('show'); // И присваиваем класс Show
+    }
+}
+
+function deleteBackground(i) { // Убиваем все Background
+    for(var i = 0; i < tabs.length; i++) {
+        bodyClass.classList.remove("bg-" + i);
     }
 }
 
