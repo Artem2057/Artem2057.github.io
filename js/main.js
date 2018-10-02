@@ -1,89 +1,47 @@
-// var three = 3;
-// for(var i = 1; i <= 5; i++) {
-// 	alert(i);
-// 	if(i >= 5) {
-// 		for(var j = 4; j >= 0; j--){
-// 			alert(j);
-// 			if(i == 5 && j == 0) {
-// 				for(var k = 1; k <= 10; k++) {
-// 					alert(three * k);
-// 				}
-// 			}
-// 		} 
-// 	}
-// }
-function pal (str, event) {
-    str = str.toLowerCase();
+window.onload = function() {
+	let head = document.querySelector('head');
+	let listWrapper = document.getElementById('main-list');
+	let firstList = document.getElementById('first-list');
+	let listOfNumbers = listWrapper.getElementsByTagName('li');
+	let listOfPeople = firstList.getElementsByTagName('li');
+	let mainTitle = document.getElementById('title');
+	let newElement;
+	let getContainer = document.getElementsByClassName('table-container')[0];
+	let getRows = getContainer.getElementsByClassName('row');
 
-    if(str.split('').reverse().join('') == str) {
-        console.log('Yes');
-    } else {
-        console.log('No');
-    }
-}
-
-pal('боб');
-
-
-function home_one() {
-    for(var i = 1; i <= 5; i++) {
-     alert(i);
-    }
-}
-
-
-function home_two() {
-     for(var j = 4; j >= 0; j--){
-         alert(j);
-    }
-}
-
-function home_three() {
-    var three = 3;
-    for(var k = 1; k <= 10; k++) {
-        alert(three * k);
-    }
-}
-
-
-var tabs = document.getElementsByClassName('tab');
-var tabItemContent = document.getElementsByClassName('tab-item-content');
-var bodyClass = document.querySelector('body');
-
-hideTabsContent(1); // Параметр означает, что 1-й жлемент контента мы не будем скрывать
-
-function hideTabsContent(activeTab) {
-    for (var i = activeTab; i < tabItemContent.length; i++) { // Тут обычный цикл и отсеивание скрытия 1-го элемента
-        tabItemContent[i].classList.remove('show'); // Удаляем у всех элементов кроме 1-го класс Show
-        tabItemContent[i].classList.add("hide"); // Добавляем у всех элементов кроме 1-го класс Show
-    }
-}
-
-
-function showNextTab(event) {
-    var target = event.target;
-    if (target.className == 'tab') { // Делаем дополнительную проверку на класс tab
-     	for (var i = 0; i < tabs.length; i++) { // Запускаем цикл
-            if (target == tabs[i]) { // Если текущий таб равен табу с таким номером, то идём дальше
-                showTabsContent(i); // Показываем контент
-                deleteBackground();
-                bodyClass.classList.add("bg-" + i); // И показываем нужный
-		    }
-	    }
+	for(var i = 1; i <= 5; i++) {
+		newElement = document.createElement('li');
+		newElement.innerHTML = '#' + i;
+		newElement.classList.add('list-item-' + i);
+		listWrapper.appendChild(newElement);
 	}
-}
 
-function showTabsContent(currentTabContent){
-    if (tabItemContent[currentTabContent].classList.contains('hide')) { // Если текущий контент имеет класс hide, то идём дальше
-        hideTabsContent(0); // Скрываем все авто
-        tabItemContent[currentTabContent].classList.remove('hide'); // Удаляем у них класс hide
-        tabItemContent[currentTabContent].classList.add('show'); // И присваиваем класс Show
-    }
-}
+	// Style of DOM elements
+	mainTitle.style.color = '#3E2D25';
+	mainTitle.style.paddingTop = '15px';
 
-function deleteBackground(i) { // Убиваем все Background
-    for(var i = 0; i < tabs.length; i++) {
-        bodyClass.classList.remove("bg-" + i);
-    }
-}
+	listOfPeople[1].style.color = 'red';
 
+	listOfNumbers[0].id = "first";
+	listOfNumbers[1].classList.add('class-two');
+	listOfNumbers[2].setAttribute('style', 'color: red');
+	listOfNumbers[3].setAttribute('style', 'display: none');
+	listOfNumbers[4].innerHTML = '<strong>#4</strong>';
+
+
+	for(let i = 0; i < getRows.length; i++) {
+		let cols = getRows[i].getElementsByClassName('col');
+
+		for(let j = 0; j < cols.length; j++) {
+			cols[j].innerHTML = j + i + 1;
+		}
+	}
+
+
+		for(var i = 0; i < getRow.length; i++) {
+			getContainer.getElementsByClassName('row')[i].getElementsByClassName('col')[0].innerHTML = i + 1;
+			getContainer.getElementsByClassName('row')[i].getElementsByClassName('col')[1].innerHTML = i + 2;
+			getContainer.getElementsByClassName('row')[i].getElementsByClassName('col')[2].innerHTML = i + 3;	
+			getContainer.getElementsByClassName('row')[i].getElementsByClassName('col')[3].innerHTML = i + 4;		
+		}	
+};
