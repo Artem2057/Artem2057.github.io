@@ -29,7 +29,7 @@ window.onload = function() {
 	listOfNumbers[4].innerHTML = '<strong>#4</strong>';
 
 
-	for(let i = 0; i < getRows.length; i++) {
+	for(let i = 0; i < getsRows.length; i++) {
 		let cols = getRows[i].getElementsByClassName('col');
 
 		for(let j = 0; j < cols.length; j++) {
@@ -37,11 +37,12 @@ window.onload = function() {
 		}
 	}
 
-
-		for(var i = 0; i < getRow.length; i++) {
-			getContainer.getElementsByClassName('row')[i].getElementsByClassName('col')[0].innerHTML = i + 1;
-			getContainer.getElementsByClassName('row')[i].getElementsByClassName('col')[1].innerHTML = i + 2;
-			getContainer.getElementsByClassName('row')[i].getElementsByClassName('col')[2].innerHTML = i + 3;	
-			getContainer.getElementsByClassName('row')[i].getElementsByClassName('col')[3].innerHTML = i + 4;		
-		}	
+	// Дикарьский способ :)
+	
+	// for(var i = 0; i < getRow.length; i++) {
+	// 	getContainer.getElementsByClassName('row')[i].getElementsByClassName('col')[0].innerHTML = i + 1;
+	// 	getContainer.getElementsByClassName('row')[i].getElementsByClassName('col')[1].innerHTML = i + 2;
+	// 	getContainer.getElementsByClassName('row')[i].getElementsByClassName('col')[2].innerHTML = i + 3;	
+	// 	getContainer.getElementsByClassName('row')[i].getElementsByClassName('col')[3].innerHTML = i + 4;		
+	// }	
 };
