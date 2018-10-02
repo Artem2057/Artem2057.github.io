@@ -38,7 +38,7 @@ window.onload = function() {
 	}
 
 	// Дикарьский способ :)
-	
+
 	// for(var i = 0; i < getRow.length; i++) {
 	// 	getContainer.getElementsByClassName('row')[i].getElementsByClassName('col')[0].innerHTML = i + 1;
 	// 	getContainer.getElementsByClassName('row')[i].getElementsByClassName('col')[1].innerHTML = i + 2;
