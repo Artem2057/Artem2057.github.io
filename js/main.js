@@ -47,7 +47,11 @@ dashBoardToggle.addEventListener('click', () =>{
 
 
 addNewToDo.addEventListener('click', () => {
-	createNewTask();
+	if(inputToDo.value == '') {
+		alert('Please fill in the field')
+	} else {
+		createNewTask();
+	}
 });
 
 function createNewTask() {
