@@ -2,76 +2,113 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>ToDo</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<style> 
+	body {
+		background: lightslategray;
+		position: relative;
+	}
+	.div-item	{
+			width: 80px; 
+	    height: 80px; 
+	    text-align: center; 
+	    border-bottom: 1px solid #000; 
+	    box-sizing: border-box; 
+	    border-right: 1px solid #000; 
+	    border: 1px solid #000; 
+	    cursor: pointer;
+	    color: #fff;
+	    font-size: 30px;
+	    font-weight: bold;
+	    text-align: center;
+	    display: -webkit-flex;
+	    display: -moz-flex;
+	    display: -ms-flex;
+	    display: -o-flex;
+	    display: flex;
+	    -ms-align-items: center;
+	    align-items: center;
+	    justify-content: center;
+	    margin: 3px;
+	    box-shadow: 2.8px 2.8px 30.6px 1.4px rgba(0, 0, 0, 0.48);
+    } 
+
+   .modal-popup {
+		font-family: 'Roboto', sans-serif;/*background: #fff;*/
+   }
+  .modal-popup-text {
+  	background-color: lightgray;
+  	display: -webkit-flex;
+  	display: -moz-flex;
+  	display: -ms-flex;
+  	display: -o-flex;
+  	display: flex;
+  	-ms-align-items: center;
+  	align-items: center;
+  	justify-content: center;
+  	text-align: center;
+  	color: #000;
+  	height: 70%;
+  	font-size: 18px;
+  	box-shadow: 2.8px 2.8px 30.6px 1.4px rgba(0, 0, 0, 0.48);
+  }
+  .modal-popup-panel {
+  	height: 20%;
+  	display: -webkit-flex;
+  	display: -moz-flex;
+  	display: -ms-flex;
+  	display: -o-flex;
+  	display: flex;
+  	-ms-align-items: center;
+  	align-items: center;
+  	justify-content: flex-end;
+  	padding: 0 15px;
+  	margin-top: 10px;
+  	background-color: lightgray;
+  	box-shadow: 2.8px 2.8px 30.6px 1.4px rgba(0, 0, 0, 0.48);
+  }
+  .modal-popup-btn {
+  	display: block;
+  	cursor: pointer;
+  	width: 78px;
+  	height: 34px;
+  	background: none;
+  	border: 1px solid #000;
+  	border-radius: 11px;
+  	outline: none;
+  	box-shadow: 2.8px 2.8px 30.6px 1.4px rgba(0, 0, 0, 0.48);
+  	position: relative;
+  }
+  .modal-popup-btn::before {
+  	content: '';
+  	position: absolute;
+  	width: 100%;
+  	height: 100%;
+  	top: 0;
+  	left: 0;
+  	border-radius: 11px;
+  	transform: scale(0);
+  	background-color: rgba(0,0,0, .4);
+  	transition: all .1s ease;
+  }
+	
+	.modal-popup-btn:active {
+		color: #fff;
+	}
+
+  .modal-popup-btn:active::before {
+  	transform: scale(1);
+  	transition: all .1s ease;
+  }
+	</style>
 </head>
 <body>
 	
-	<div class="toDo-container">
-		<div class="left-sidebar">
-			<div class="logo">
-				<img src="logo.png" alt="">
-			</div>
-			<ul class="main-menu">
-				<li id="toggleDashboard">Dashboard</li>
-				<li id="openPopupOfToDo">Add Tasks</li>
-				<li>Help</li>
-			</ul>
-			<span class="version-app">v 0.0.1</span>
-		</div>
-		<div class="dashboard">
-			<div class="day-item monday">
-				<h2>Monday</h2>
-				<ul id="monday">
-				</ul>
-			</div>
-			<div class="day-item tuesday">
-				<h2>Tuesday</h2>
-				<ul id="tuesday"></ul>
-			</div>
-			<div class="day-item wednesday">
-				<h2>Wednesday</h2>
-				<ul id="wednesday"></ul>
-			</div>
-			<div class="day-item thursday">
-				<h2>Thursday</h2>
-				<ul id="thursday">
-				</ul>
-			</div>
-			<div class="day-item friday">
-				<h2>Friday</h2>
-				<ul id="friday"></ul>
-			</div>
-			<div class="day-item saturday">
-				<h2>Saturday</h2>
-				<ul id="saturday"></ul>
-			</div>
-			<div class="day-item sunday">
-				<h2>Sunday</h2>
-				<ul id="sunday"></ul>
-			</div>
-		</div>
+	<div class="x0" id="x0">
+		
+	</div>
 
-	<div class="addTodo-overley">
-		<div class="settings-todo">
-			<div class="container-of-toDo">
-				<input id="inputToDo" type="text" placeholder="Enter your task">
-				<select name="" id="selectToDo">
-					<option data-id="0" class="toDoOption">Monday</option>
-  				<option data-id="1" class="toDoOption">Tuesday</option>
-  				<option data-id="2" class="toDoOption">Wednesday</option>
-  				<option data-id="3" class="toDoOption">Thursday</option>
-  				<option data-id="4" class="toDoOption">Friday</option>
-  				<option data-id="5" class="toDoOption">Saturday</option>
-  				<option data-id="6" class="toDoOption">Sunday</option>
-				</select>
-			</div>
-			<button id="closeToDo"></button>
-			<button id="addToDobtn">Add task</button>
-		</div>
-	</div>
-	</div>
-	<script src="js/main.js"></script>
+	<script src="main.js"></script>
 </body>
 </html>
