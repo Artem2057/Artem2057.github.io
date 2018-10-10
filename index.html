@@ -2,113 +2,351 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<style> 
-	body {
-		background: lightslategray;
-		position: relative;
-	}
-	.div-item	{
-			width: 80px; 
-	    height: 80px; 
-	    text-align: center; 
-	    border-bottom: 1px solid #000; 
-	    box-sizing: border-box; 
-	    border-right: 1px solid #000; 
-	    border: 1px solid #000; 
-	    cursor: pointer;
-	    color: #fff;
-	    font-size: 30px;
-	    font-weight: bold;
-	    text-align: center;
-	    display: -webkit-flex;
-	    display: -moz-flex;
-	    display: -ms-flex;
-	    display: -o-flex;
-	    display: flex;
-	    -ms-align-items: center;
-	    align-items: center;
-	    justify-content: center;
-	    margin: 3px;
-	    box-shadow: 2.8px 2.8px 30.6px 1.4px rgba(0, 0, 0, 0.48);
-    } 
-
-   .modal-popup {
-		font-family: 'Roboto', sans-serif;/*background: #fff;*/
-   }
-  .modal-popup-text {
-  	background-color: lightgray;
-  	display: -webkit-flex;
-  	display: -moz-flex;
-  	display: -ms-flex;
-  	display: -o-flex;
-  	display: flex;
-  	-ms-align-items: center;
-  	align-items: center;
-  	justify-content: center;
-  	text-align: center;
-  	color: #000;
-  	height: 70%;
-  	font-size: 18px;
-  	box-shadow: 2.8px 2.8px 30.6px 1.4px rgba(0, 0, 0, 0.48);
-  }
-  .modal-popup-panel {
-  	height: 20%;
-  	display: -webkit-flex;
-  	display: -moz-flex;
-  	display: -ms-flex;
-  	display: -o-flex;
-  	display: flex;
-  	-ms-align-items: center;
-  	align-items: center;
-  	justify-content: flex-end;
-  	padding: 0 15px;
-  	margin-top: 10px;
-  	background-color: lightgray;
-  	box-shadow: 2.8px 2.8px 30.6px 1.4px rgba(0, 0, 0, 0.48);
-  }
-  .modal-popup-btn {
-  	display: block;
-  	cursor: pointer;
-  	width: 78px;
-  	height: 34px;
-  	background: none;
-  	border: 1px solid #000;
-  	border-radius: 11px;
-  	outline: none;
-  	box-shadow: 2.8px 2.8px 30.6px 1.4px rgba(0, 0, 0, 0.48);
-  	position: relative;
-  }
-  .modal-popup-btn::before {
-  	content: '';
-  	position: absolute;
-  	width: 100%;
-  	height: 100%;
-  	top: 0;
-  	left: 0;
-  	border-radius: 11px;
-  	transform: scale(0);
-  	background-color: rgba(0,0,0, .4);
-  	transition: all .1s ease;
-  }
-	
-	.modal-popup-btn:active {
-		color: #fff;
-	}
-
-  .modal-popup-btn:active::before {
-  	transform: scale(1);
-  	transition: all .1s ease;
-  }
-	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>KosArt - Артём Костоглодов</title>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
+	<script src="js/modernizr.js"></script>
+	<!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-	
-	<div class="x0" id="x0">
-		
-	</div>
+	<!-- ====================================================
+	header section -->
+	<header class="top-header">
+		<div class="container">
+			<div class="row">
+				<!-- nav starts here -->
+				<div class="col-md-12">					
+					<nav class="navbar navbar-default">
+						<div class="container-fluid nav-bar">
+						    <div class="navbar-header">
+						      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						        <span class="sr-only">Toggle navigation</span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						      </button>
+						      <a href="index.html"><img src="img/logo.png" alt="" class="img-responsive logo"></a>
+						    </div>
+						    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						      <ul class="nav navbar-nav navbar-right">
+						        <li><a href="#home">Home</a></li>
+						        <li><a href="#features">My Skills</a></li>
+						        <li><a href="#about">Approaches</a></li>
+						        <li><a href="#testimonials">Projects</a></li>
+						        <!-- <li><a href="#contact">Contact</a></li> -->
+						      </ul>
+						    </div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header><!-- end of header section -->
 
-	<script src="main.js"></script>
+	<!-- banner section starts here -->
+	<section class="banner" id="home">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 wow fadeInLeft animated">
+					<h3>introducing lucid theme</h3>
+					<h1>Kostoglodov Artem summary</h1>
+					<!-- <p>Etiam ullamcorper et turpis eget hendrerit. Praesent varius risus mi, at elementum magna ultricies accumsan. Cras venenatis lacus sed dolor placerat tempus. Morbi blandit at neque ut imperdiet.</p> -->
+					<button class="download-btn">download my summary</button>
+				</div>
+				<div class="col-xs-6 banner-img wow fadeInRight animated">
+					<img class="img-responsive" src="img/s8.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section><!-- end of banner section -->
+
+	<!-- feature sectiona -->
+	<section class="features text-center" id="features">
+		<div class="container">
+			<div class="row">
+				<h4>product overview</h4>
+				<h2>Technologies that I know</h2>
+				<img class="img-responsive" src="img/daag.png" alt="">
+				<div class="col-md-3 wow zoomIn animated">
+					<img class="img-icon-item" src="img/icon-4.png" alt="">
+					<h3>HTML/CSS - Advanced</h3>
+					<!-- <p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum lacinia consectetur.</p> -->
+				</div>
+				<div class="col-md-3 wow zoomIn animated">
+					<img class="img-icon-item" src="img/icon-2.png" alt="">
+					<h3>Native Javascript</h3>
+					<p>Prototype inheritance</p>
+					<p>Basic OOP</p>
+				</div>
+				<div class="col-md-3 wow zoomIn animated">
+					<img class="img-icon-item" src="img/icon-3.png" alt="">
+					<h3>Jquery</h3>
+					<p>Development of various animations</p>
+					<p>Building logic</p>
+				</div>
+				<div class="col-md-3 wow zoomIn animated">
+					<img class="img-icon-item" src="img/icon-5.png" alt="" style="width: 200px;">
+					<h3>HTML preprocesors SASS/SCSS/Less/Stylus</h3>
+					<p>Mixins</p>
+					<p>Variables</p>
+					<!-- <p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum lacinia consectetur.</p> -->
+				</div>
+				<div class="col-md-3 wow zoomIn animated">
+					<!-- <i class="fa fa-mobile"></i> -->
+					<img class="img-icon-item" src="img/icon-6.png" alt="" style="width: 200px;">
+					<h3>Project builders GULP/Webpack</h3>
+					<p>Full setup collector for the project</p>
+					<p>Ggraphics optimization</p>
+				</div>
+				<div class="col-md-3 wow zoomIn animated">
+					<!-- <i class="fa fa-mobile"></i> -->
+					<img class="img-icon-item" src="img/icon-1.png" alt="">
+					<h3>CMS Wordpress</h3>
+					<p>Layout stretch on Wordpress</p>
+				</div>
+				<div class="col-md-3 wow zoomIn animated">
+					<!-- <i class="fa fa-mobile"></i> -->
+					<img class="img-icon-item" src="img/icon-7.png" alt="" >
+					<h3>Basic understanding of the Angular 2 framework</h3>
+					<p>Creating components</p>
+				</div>
+				<div class="col-md-3 wow zoomIn animated">
+					<!-- <i class="fa fa-mobile"></i> -->
+					<img class="img-icon-item" src="img/icon-9.png" alt="" >
+					<h3>Bootstrap 3,4</h3>
+					<p>Grid system</p>
+					<p>Sliders</p>
+					<p>Tabs</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section><!-- end of features section -->
+	<hr>
+	<!-- details section -->
+	<section class="details" id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 col-xs-6 col-sm-6 wow slideInUp animated">
+					<img class="img-responsive details-phone" src="img/verticle-phone.png" alt="">
+				</div>
+				<div class="col-md-6 col-md-offset-1 col-xs-6 col-sm-6 wow slideInUp animated">
+					<h4>dip into the details</h4>
+					<h2>Mobile first and Desctop development</h2>
+					<img class="img-responsive" src="img/daag.png" alt="">
+					
+					<ul class="advantages">
+						<li><i class="fa fa-trophy"></i>Beautiful animations</li>
+						<li><i class="fa fa-mobile"></i>Fully responsive</li>
+						<li><i class="fa fa-bolt"></i> Retina ready</li>
+						<li><i class="fa fa-tachometer"></i>Excellent results on PageSpeed Insights</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section><!-- end of details section -->
+
+	<!-- features details section -->
+	<section class="feature-detail">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-5 wow fadeInLeft animated">
+					<h4>My projects</h4>
+					<h2>BROOTHERHOD</h2>
+					<img src="img/daag.png" alt="">
+					<!-- <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p> -->
+				</div>
+				<div class="col-xs-7 horizontal-phone wow fadeInRight animated">
+					<img class="img-responsive example-img" src="img/example1.jpg" alt="phone">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-5 wow fadeInLeft animated">
+					<h4>My projects</h4>
+					<h2>FOOSESHOES</h2>
+					<img src="img/daag.png" alt="">
+					<!-- <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p> -->
+				</div>
+				<div class="col-xs-7 horizontal-phone wow fadeInRight animated">
+					<img class="img-responsive example-img" src="img/example2.jpg" alt="phone">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-5 wow fadeInLeft animated">
+					<h4>My projects</h4>
+					<h2>Копка колодцев</h2>
+					<img src="img/daag.png" alt="">
+					<button class="view-example features-btn">view example</button>
+					
+					<!-- <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p> -->
+				</div>
+				<div class="col-xs-7 horizontal-phone wow fadeInRight animated">
+					<img class="img-responsive example-img" src="img/example3.jpg" alt="phone">
+				</div>
+			</div>
+						<div class="row">
+				<div class="col-xs-5 wow fadeInLeft animated">
+					<h4>My projects</h4>
+					<h2>Go2Trader</h2>
+					<img src="img/daag.png" alt="">
+					<button class="view-example features-btn"><a href="https://go2trader.desta.software/">view example</a></button>
+					
+					<!-- <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p> -->
+				</div>
+				<div class="col-xs-7 horizontal-phone wow fadeInRight animated">
+					<img class="img-responsive example-img" src="img/example4.png" alt="phone">
+				</div>
+			</div>
+		</div>
+	</section><!-- end of features-detail section -->
+
+	<!-- pricing-slide section starts here -->
+	<section class="pricing-slide" id="testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="pricing-slide-heading text-center">
+					<h4>quality has its price</h4>
+					<h2>The main project that gave me a lot of new knowledge in web development</h2>
+					<img class="img=responsive" src="img/daag.png" alt="">
+				</div>
+				<div class="the-pricing-slider">
+					<div class="main-project">
+						<img src="img/main-project.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- end of pricing-slide section -->
+
+	<!-- find section -->
+	<section class="download">
+		<div class="container">
+			<h3 class="center">It's a single page application on Angular 2</h3>
+			<div class="row">
+					<div class="col-md-3 main-projext-item">
+						<img src="img/main-project1.jpg" alt="">
+					</div>
+					<div class="col-md-3 main-projext-item">
+						<img src="img/main-project2.jpg" alt="">
+					</div>
+					<div class="col-md-3 main-projext-item">
+						<img src="img/main-project3.jpg" alt="">						
+					</div>
+					<div class="col-md-3 main-projext-item">
+						<img src="img/main-project4.jpg" alt="">	
+					</div>
+			</div>
+		</div>
+		<!-- <span>Thanks to this project I learned to work in a team.</span> -->
+	</section><!-- end of find section -->
+
+	<!-- price-plan section -->
+<!-- 	<section class="price-plan text-center" id="pricing">
+		<div class="container">
+			<div class="row">
+				<div class="pricing-heading">
+					<h4>quality has its price</h4>
+					<h2>Pricings &amp; Plans</h2>
+					<img class="img-responsive" src="img/daag.png" alt="">
+				</div>
+				<div class="pricing-tables">
+					<div class="col-md-3 col-sm-6 wow zoomIn animated">
+						<div class="single-table free">
+							<div class="table-heading">
+								<h3>FREE</h3>
+							</div>
+							<div class="table-price">
+								<h5><span>$</span>0</h5>
+								<p>/per month</p>
+							</div>
+							<div class="table-description">
+								<p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum <a href="#">lacinia</a> consectetur.</p>
+								<button>ORDER NOW</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 wow zoomIn animated">
+						<div class="single-table personal">
+							<div class="table-heading">
+								<h3>Personal</h3>
+							</div>
+							<div class="table-price">
+								<h5><span>$</span>25</h5>
+								<p>/per month</p>
+							</div>
+							<div class="table-description">
+								<p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum <a href="#">lacinia</a> consectetur.</p>
+								<button>ORDER NOW</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 wow zoomIn animated">
+						<div class="single-table business">
+							<div class="table-heading">
+								<h3>Business</h3>
+							</div>
+							<div class="table-price business-price">
+								<h5><span>$</span>50</h5>
+								<p>/per month</p>
+							</div>
+							<div class="table-description">
+								<p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum <a href="#">lacinia</a> consectetur.</p>
+								<button>ORDER NOW</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 wow zoomIn animated">
+						<div class="single-table ultimate">
+							<div class="table-heading">
+								<h3>Ultimate</h3>
+							</div>
+							<div class="table-price">
+								<h5><span>$</span>99</h5>
+								<p>/per month</p>
+							</div>
+							<div class="table-description">
+								<p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum <a href="#">lacinia</a> consectetur.</p>
+								<button>ORDER NOW</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+ -->
+
+
+		
+
+	<footer class="footer text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="icons">
+						<a href="https://www.facebook.com/kastik.mascot"><i class="fa fa-facebook"></i></a>
+					</div>
+					<p>2018 Artem Kostoglodov</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="js/smoothscroll.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/wow.js"></script>
 </body>
 </html>
