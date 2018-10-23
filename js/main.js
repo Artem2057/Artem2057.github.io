@@ -22,14 +22,22 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
 path.forEach((el, i) => {
-    path[i].addEventListener('click', (e) => {
+    el.addEventListener('click', (e) => {
+
         e.preventDefault();
         e.stopPropagation();
-        let attr = path[i].getAttribute('href').slice(1);
+        target = e.target;
+
+        path.forEach((el,i) => {
+            el.classList.remove('active');
+            target.classList.add('active');
+        });
+
+        let attr = el.getAttribute('href').slice(1);
         let sec = allSection[i].getAttribute('id');
         let secs =  allSection[i];
+
         if(attr.length != 0) {
             let settInt = setInterval(()=> {
                 if(attr === sec ) {
@@ -50,3 +58,11 @@ path.forEach((el, i) => {
         }
     }); 
 });
+
+
+
+// Проверка на класс - *** работает даже в старых IE ***
+let hasClass = (element, className) => {
+    let rx = new RegExp('(?:^| )' + className + '(?: |$)');
+    return rx.test(element.className);
+}

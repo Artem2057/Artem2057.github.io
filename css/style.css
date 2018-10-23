@@ -70,6 +70,7 @@ h2 {
 .header > .main-nav > ul li a {
     color: #fff;
     text-decoration: none;
+    padding: 10px;
 }
 
 section {
@@ -102,4 +103,10 @@ body::-webkit-scrollbar-track {
     box-shadow: 0 0 10px rgba(255,221,0, 0.3);
     -webkit-border-radius: 5px;
             border-radius: 5px; 
+}
+
+.header > .main-nav > ul li a.active {
+    background-color: #fff;
+    color: #000;
+    transition: all .5s ease;
 }
