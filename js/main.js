@@ -1,21 +1,16 @@
 let h2 = document.getElementById('firstH2');
-let sc3 = document.getElementById('section2');
+let sc2 = document.getElementById('section2');
 let h2OffsetTop = h2.offsetTop;
-let sc2OffsetTop = sc3.offsetTop;
+let sc2OffsetTop = sc2.offsetTop;
 let path = document.querySelectorAll('a.scrollTo');
-
-let sec1 = document.querySelector('#section1');
-let sec2 = document.querySelector('#section2');
-let sec3 = document.querySelector('#section3');
-let sec4 = document.querySelector('#section4');
-let sec5 = document.querySelector('#section5');
+let mainNav = document.getElementById("main-nav");
 let allSection = document.querySelectorAll('section.default');
 
 window.addEventListener('scroll', () => {
     if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-        document.getElementById("main-nav").classList.add('fixed-nav');
+        mainNav.classList.add('fixed-nav');
     } else {
-        document.getElementById("main-nav").classList.remove('fixed-nav');
+        mainNav.classList.remove('fixed-nav');
     }
     if(document.body.scrollTop >= h2OffsetTop - 70 || document.documentElement.scrollTop >= h2OffsetTop - 70) {
         h2.classList.add('fixed-style');
