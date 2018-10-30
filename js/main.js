@@ -1,68 +1,132 @@
-let h2 = document.getElementById('firstH2');
-let sc2 = document.getElementById('section2');
-let h2OffsetTop = h2.offsetTop;
-let sc2OffsetTop = sc2.offsetTop;
-let path = document.querySelectorAll('a.scrollTo');
-let mainNav = document.getElementById("main-nav");
-let allSection = document.querySelectorAll('section.default');
+let isDashboardVisible = false;
 
-window.addEventListener('scroll', () => {
-    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-        mainNav.classList.add('fixed-nav');
-    } else {
-        mainNav.classList.remove('fixed-nav');
-    }
-    if(document.body.scrollTop >= h2OffsetTop - 70 || document.documentElement.scrollTop >= h2OffsetTop - 70) {
-        h2.classList.add('fixed-style');
-    } else {
-        h2.classList.remove('fixed-style');
-    }
-    if(document.body.scrollTop > sc2OffsetTop - 200 || document.documentElement.scrollTop > sc2OffsetTop - 200) {
-        h2.classList.remove('fixed-style');
-    }
-});
+let openPopupBtn = document.getElementById('openPopupOfToDo');
+let todoPopup = document.getElementsByClassName('addTodo-overley')[0];
+let closeToDoPopup = document.getElementById('closeToDo');
+let dashBoardToggle = document.getElementById('toggleDashboard');
+let dashboard = document.getElementsByClassName('dashboard')[0];
+let addNewToDo = document.getElementById('addToDobtn');
+let inputToDo = document.getElementById('inputToDo');
+let selectTodo = document.getElementById('selectToDo');
 
-path.forEach((el, i) => {
-    el.addEventListener('click', (e) => {
 
-        e.preventDefault();
-        e.stopPropagation();
-        target = e.target;
+todoPopup.classList.add('hide');
 
-        path.forEach((el,i) => {
-            el.classList.remove('active');
-            target.classList.add('active');
-        });
-
-        let attr = el.getAttribute('href').slice(1);
-        let sec = allSection[i].getAttribute('id');
-        let secs =  allSection[i];
-
-        if(attr.length != 0) {
-            let settInt = setInterval(()=> {
-                if(attr === sec ) {
-                    if(document.documentElement.scrollTop < secs.offsetTop) {
-                        document.documentElement.scrollTop += 40;
-                        if(document.documentElement.scrollTop >= secs.offsetTop) {
-                            clearInterval(settInt);
-                        }
-                    }  
-                    if(document.documentElement.scrollTop >= secs.offsetTop) {
-                        document.documentElement.scrollTop -= 40;
-                        if(document.documentElement.scrollTop <= secs.offsetTop) {
-                            clearInterval(settInt);
-                        }
-                    }
-                }
-            }, 10);
-        }
-    }); 
-});
+// variables of days
+let monday = document.getElementById('monday');
+let tuesday = document.getElementById('tuesday');
+let wednesday = document.getElementById('wednesday');
+let thursday = document.getElementById('thursday');
+let friday = document.getElementById('friday');
+let saturday = document.getElementById('saturday');
+let sunday = document.getElementById('sunday');
 
 
 
-// Проверка на класс - *** работает даже в старых IE ***
-let hasClass = (element, className) => {
-    let rx = new RegExp('(?:^| )' + className + '(?: |$)');
-    return rx.test(element.className);
+class Task {
+	constructor(inputValue, selectIndex, selectOptions) {
+		this.inputValue =  inputValue;
+		this.selectIndex = selectIndex;
+		this.selectOptions = selectOptions;
+	}
+
+
+	createNewTask() {
+		let getInpVal = this.inputValue.value;
+
+
+		let x =	selectTodo.selectedIndex;
+		let y = selectTodo.options;
+		let YXINDEX = y[x].index;
+
+		let newElementLi;
+		let newElementBtn;
+
+		newElementLi =  document.createElement('li');
+		newElementLi.id = 'toDo-list-item';
+		newElementLi.innerHTML = getInpVal;
+
+
+		newElementBtn = document.createElement('button');
+		newElementBtn.classList.add('deleteThisTask');
+		newElementBtn.id = 'deleteThisTask';
+		newElementBtn.innerText = 'delete';
+		newElementLi.prepend(newElementBtn);
+		this.inputValue.value = '';
+
+		switch(YXINDEX) {
+			case 0:  
+				monday.prepend(newElementLi);
+				break
+			case 1:  
+				tuesday.prepend(newElementLi);
+				break
+			case 2:  
+				wednesday.prepend(newElementLi);
+				break
+			case 3:  
+				thursday.prepend(newElementLi);
+				break
+			case 4:  
+				friday.prepend(newElementLi);
+				break
+			case 5:  
+				saturday.prepend(newElementLi);
+				break
+			case 6:  
+				sunday.prepend(newElementLi);
+				break
+		}
+
+		newElementBtn.addEventListener('click', (e) => {
+			var target = e.target;
+			target.parentElement.remove();
+		});
+	}
+
+	validateInput() {
+		if(this.inputValue.value == '') {
+			alert('Please fill in the field')
+		} else {
+			this.createNewTask();
+		}
+	}
 }
+
+
+/** 
+	1- inputValue - find input which will be use for new task
+**/
+
+let createNewTask = new Task(inputToDo);
+
+
+
+openPopupBtn.addEventListener('click', () => {
+		todoPopup.classList.remove('hide');
+		todoPopup.classList.add('show');
+});
+
+
+closeToDoPopup.addEventListener('click', () => {
+	todoPopup.classList.remove('show');
+	todoPopup.classList.add('hide');
+});
+
+
+dashBoardToggle.addEventListener('click', () =>{
+	isDashboardVisible =  !isDashboardVisible;
+	if(isDashboardVisible) {
+		dashboard.classList.remove('show');
+		dashboard.classList.add('hide');
+	} else {
+		dashboard.classList.remove('hide');
+		dashboard.classList.add('show');
+	}
+});
+
+
+addNewToDo.addEventListener('click', () => {
+	createNewTask.validateInput()
+});
+
