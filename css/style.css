@@ -1,0 +1,42 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.wrapper {
+	position: relative;
+	background-image: url('../bg.jpg');
+	margin: 0 auto;
+	width: 2000px;
+	height:100%;
+	overflow: hidden;
+	background-size: cover;
+}
+
+.secret {
+	position: relative;
+  background-image: url('../it.png');
+  background-repeat: no-repeat;
+	width: 700px;
+	height: 1000px;
+	background-size: contain;
+}
+
+.count {
+  position: relative;
+  font-size: 30px;
+  color: white;
+  z-index: 2;
+  margin: 10px;
+}
+
+.darkness {
+	position: absolute;
+	left: -50%;
+	top: -50%;
+	background: radial-gradient(transparent,rgba(0,0,0,0.7),black, black, black, black, black, black, black, black, black, black, black, black, black, black, black, black);
+	width: 3500px;
+	height: 3000px;
+}
