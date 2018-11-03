@@ -1,4 +1,9 @@
-document.getElementById("container").onmousemove = function(e) {
+// document.getElementById("container").onmousemove = function(e) {
+//   obj = document.getElementById("darkness");
+//   obj.style.top = e.pageY - ($(obj).height() / 2) + "px";
+//   obj.style.left = e.pageX - ($(obj).width() / 4) - ($(body).width() / 2) + "px";
+// };
+document.getElementById("container").touchstart = function(e) {
   obj = document.getElementById("darkness");
   obj.style.top = e.pageY - ($(obj).height() / 2) + "px";
   obj.style.left = e.pageX - ($(obj).width() / 4) - ($(body).width() / 2) + "px";
