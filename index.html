@@ -1,52 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>IVE - Irregular Verbs Easy</title>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>IVE - irregular verbs ease</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<!-- <link rel="icon" href="img/favicon/favicon.ico"> -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/preloader.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/main.min.css">
+
 </head>
+
 <body>
 
-<div class="preloader hidden-preloader">
-	<div class="banter-loader">
-		<div class="banter-loader__box"></div>
-		<div class="banter-loader__box"></div>
-		<div class="banter-loader__box"></div>
-		<div class="banter-loader__box"></div>
-		<div class="banter-loader__box"></div>
-		<div class="banter-loader__box"></div>
-		<div class="banter-loader__box"></div>
-		<div class="banter-loader__box"></div>
-		<div class="banter-loader__box"></div>
-	</div>
-</div>
-	<div class="IVE-interface">
+	<div class="ive-app"></div>
 
-		<div class="IVE-welcome-component">
-			<div class="IVE-logo">
-				<img src="img/IVE-logo.png" alt="IVE-logo">
+	<div class="preloader hide">
+		<div class="banter-loader">
+			<div class="banter-loader__box"></div>
+			<div class="banter-loader__box"></div>
+			<div class="banter-loader__box"></div>
+			<div class="banter-loader__box"></div>
+			<div class="banter-loader__box"></div>
+			<div class="banter-loader__box"></div>
+			<div class="banter-loader__box"></div>
+			<div class="banter-loader__box"></div>
+			<div class="banter-loader__box"></div>
 			</div>
-			<h2 class="IVE-main-title-welcome-component">Добро пожаловать в </h2>
-			<h3 class="IVE-abbreviation-component">IVE</h3>
-			<h3 class="IVE-subtitle-welcome-component">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</h3>
-
-			<form action="" class="IVE-welcome-form-component">
-				<p>Как вас зовут ?</p>
-				<div class="IVE-form-container">
-					<span class="IVE-err-message-any-name hidden">Вы не ввели ваше имя !</span>
-				</div>
-				<input id="IVESubmitInput" type="text" class="IVE-welcome-form-input" placeholder="Введите ваше имя...">
-				<button id="IVESubmitBtn" class="IVE-welcome-form-submit-btn">Ok</button>
-			</form>
-		</div>
-
-
 	</div>
-<script src="js/main.js"></script>
+	<div class="services">
+		<div class="old-phone">
+				<h2>Your device does not support this application...</h2>
+		</div>
+	</div>
+	
+	<script src="js/hammer.min.js"></script>
+	<script src="js/arrays.js"></script>
+	<script src="js/main-app.js"></script>
+	<script src="js/welcome-flow.js"></script>
+
 </body>
 </html>
