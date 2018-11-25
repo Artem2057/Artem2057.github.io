@@ -147,4 +147,3 @@ class MainAppClass {
 }
 
 let MainApp = new MainAppClass();
-// MainApp.loadWelcomeFlow();
