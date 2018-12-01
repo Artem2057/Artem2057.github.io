@@ -6,12 +6,11 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>IVE - irregular verbs ease</title>
+	<title>Marco ceramic</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
 	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
 	<!-- <link rel="icon" href="img/favicon/favicon.ico"> -->
@@ -22,39 +21,538 @@
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/preloader.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/slick.css">	
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
 <body>
 
-	<div class="ive-app"></div>
-
-	<div class="preloader hide">
-		<div class="banter-loader">
-			<div class="banter-loader__box"></div>
-			<div class="banter-loader__box"></div>
-			<div class="banter-loader__box"></div>
-			<div class="banter-loader__box"></div>
-			<div class="banter-loader__box"></div>
-			<div class="banter-loader__box"></div>
-			<div class="banter-loader__box"></div>
-			<div class="banter-loader__box"></div>
-			<div class="banter-loader__box"></div>
-			</div>
-	</div>
-	<div class="services">
-		<div class="old-phone">
-				<h2>Your device does not support this application...</h2>
-		</div>
+	<!-- preloader -->
+	<div class="holder">
+		<div class="preloader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 	</div>
 	
-	<script src="js/hammer.min.js"></script>
-	<script src="js/arrays.js"></script>
-	<script src="js/main-app.js"></script>
-	<script src="js/welcome-flow.js"></script>
+	<ul class="basket-line-to-add-products">
 
+	</ul>
+
+	<!-- Lagnguages on pages -->
+	<div class="fixed-languages hidden-md">
+		<ul class="fixed-languages">
+			<li><a href="#">Ru</a></li>
+			<li><a href="#">Ua</a></li>
+			<li><a href="#">En</a></li>
+		</ul>
+	</div>
+
+
+	<!-- Header -->
+	<header id="header" class="header header-top-line">
+
+		<div class="header-nav-box">
+			<button id="toggleMenuBtn" class="header-nav-box-menu-btn"><span></span></button>
+			<button id="toggleSearchLineBtn" class="header-nav-box-search-btn"></button>
+		</div>
+
+		<div class="header-logo-box">
+			<a href=""><img class="img-responsive" src="img/logo.png" alt="logo"></a>
+		</div>
+
+		<div class="header-userInfo-box">
+			<button class="header-userInfo-box-call"></button>
+			<button id="registrationFormBtn" class="header-userInfo-box-user hidden-md"></button>
+			<button id="basketPopupBtn" class="header-userInfo-box-basket"><span id="basketProductsCountCircle" class="hide">0</span></button>
+		</div>
+
+
+		<!-- Header popups -->
+		<div id="headerMenuPopup" class="header-menu-container ceramic-popup">
+			<div>
+				<button id="closeMenuPopupBtn" class="close-menu-btn"><span></span><span></span></button>
+				<ul class="header-menu">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Каталог</a></li>
+					<li class="scrollOneFullScreen"><a href="#aboutUs">О нас</a></li>
+					<li class="scrollOneFullScreen"><a class="showContactsPopup" href="#header">Контакты</a></li>
+				</ul>
+				<button><a class="my-account-link" href="#">Мой аккаунт</a></button>
+				<button disabled><a class="registration-account-link" href="#">Регистрация</a></button>
+
+				<div class="social-networks">
+					<div class="flex">
+						<button>
+							<a href="#"></a>
+						</button>
+						<button>
+							<a href="#"></a>
+						</button>
+						<button>
+							<a href="#"></a>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-search ceramic-popup">
+			<input type="text" placeholder="Поиск">
+		</div>
+
+		<div id="headerContactsPopup" class="header-contacts ceramic-popup">
+			<ul>
+				<li>(095) 831 79 93</li>
+				<li>(095) 860 46 08</li>
+				<li>(050) 238 15 10</li>
+			</ul>
+		</div>
+
+		<div id="headerRegistrationPopup" class="header-registration ceramic-popup">
+			<form class="registration-form" action="">
+				<div class="line-fileds">
+					<input type="text" placeholder="Имя">
+					<input type="text" placeholder="Телефон">
+				</div>
+				<div class="line-fileds">
+					<input type="text" placeholder="Организация">
+					<input type="text" placeholder="E-mail">
+				</div>
+				<div class="line-fileds line-fileds-last">
+					<input type="password" placeholder="Пароль">
+					<div>
+						<button type="submit">Отправить</button>
+					</div>
+				</div>
+
+				<span class="have-account-text">Уже есть аккаунт? <a id="loginLink" href="#">Войти</a></span>
+			</form>
+		</div>
+
+		<div id="headerLogInPopup" class="header-logIn ceramic-popup">
+			<form class="registration-form" action="">
+				<div class="line-fileds">
+					<input type="text" placeholder="E-mail">
+				</div>
+				<div class="line-fileds line-fileds-last">
+					<input type="password" placeholder="Пароль">
+				</div>
+				<div class="line-fileds line-fileds-last">
+					<div>
+						<button type="submit">Войти</button>
+						<a href="#" class="forgot-password-link">Забыли пароль?</a>
+					</div>
+				</div>
+
+
+				<span class="have-account-text">Нет учетной записи ? <a id="registrationLink" href="#">Зарегистрироваться</a></span>
+			</form>
+		</div>
+
+		<div id="headerBasketPopup" class="header-basket-popup ceramic-popup">
+			<div class="basket-empty">
+				<h5>Корзина пуста</h5>
+			</div>
+			<ul class="list perfect-scroll">
+				<!-- <li class="list-item">
+						<div class="list-item-thumbnail"><img class="img-responsive" src="img/produce_1.png" alt="product"></div>
+						<div class="recounter-container">
+							<button class="increment-product-count">+</button>
+							<span class="counter-of-product">1</span>
+							<button class="decriment-product-count">-</button>
+						</div>
+						<div class="description-container">
+							<span class="product-name">Ваза клариса</span>
+							<span class="product-code">2439725</span>
+						</div>
+						<span class="product-price">27грн</span>
+						<button class="delete-product-btn"><span></span><span></span></button>
+				</li>
+				<li class="list-item">
+						<div class="list-item-thumbnail"><img class="img-responsive" src="img/produce_1.png" alt="product"></div>
+						<div class="recounter-container">
+							<button class="increment-product-count">+</button>
+							<span class="counter-of-product">1</span>
+							<button class="decriment-product-count">-</button>
+						</div>
+						<div class="description-container">
+							<span class="product-name">Ваза клариса</span>
+							<span class="product-code">2439725</span>
+						</div>
+						<span class="product-price">27грн</span>
+						<button class="delete-product-btn"><span></span><span></span></button>
+				</li> -->
+			</ul>
+			<span class="total-price-text">Итого:<span id="totalPrice" class="tottal-price">0</span>Грн</span>
+			<button id="placeOrderBtn" class="g-btn checkout-btn" disabled="true">Оформить заказ</button>
+		</div>
+
+	</header>
+
+	<!-- Tabs section -->
+	<section class="main-tabs-section">
+		<ul class="tabs-line hidden-md">
+			<li>Декор</li>
+			<li class="active">Кухня</li>
+			<li class="align-text">Лепка ручной <span class="br">работы</span></li>
+			<li>Винные наборы</li>
+			<li>Stone ceramic</li>
+			<li class="align-text">Акции и <span class="br">спецпредложения</span></li>
+		</ul>
+
+		<div class="tabs-content hidden-md">
+			<div class="tab-item-content hide">
+				<div>
+					<h2>Декор</h2>
+					<button class="g-btn familiarize">Ознакомиться</button>
+				</div>
+			</div>			
+			<div class="tab-item-content">
+				<div>
+					<h2>Керамика <span class="br">для кухни</span></span></h2>
+					<button class="familiarize">Ознакомиться</button>
+				</div>
+			</div>
+			<div class="tab-item-content hide">
+				<div>
+					<h2>Лепка <span class="br">ручной работы</span></h2>
+					<button class="familiarize">Ознакомиться</button>
+				</div>
+			</div>
+			<div class="tab-item-content hide">
+				<div>
+					<h2>Винные наборы</h2>
+					<button class="familiarize">Ознакомиться</button>
+				</div>
+			</div>
+			<div class="tab-item-content hide">
+				<div>
+					<h2>Лепка <span class="br">ручной работы</span></h2>
+					<button class="familiarize">Ознакомиться</button>
+				</div>
+			</div>
+			<div class="tab-item-content hide">
+				<div>
+					<h2>Лепка <span class="br">ручной работы</span></h2>
+					<button class="familiarize">Ознакомиться</button>
+				</div>
+			</div>
+		</div>
+
+		<button class="scroll-one-full-screen scrollOneFullScreen hidden-md"><a href="#mainContent">Scroll</a></button>
+
+		<button class="product-to-categories hidden-lg"><span>Товары по категориям</span></button>
+	</section>
+
+
+
+	<!-- Main content -->
+	<section id="mainContent" class="main-content">
+
+		<section class="news-products">
+
+			<div class="big-titles">
+				<h2 class="def-big-title-opct">News</h2>
+				<h3 class="def-section-title">Новинки</h3>
+			</div>
+			<div class="slick-slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+				<div class="item">
+					<div class="product-box-item">
+						<div class="product-box-item-img">
+							<img src="img/Layer_12.png" alt="product">
+							<button class="add-to-basket"><span class="rotate">Добавить в корзину</span></button>
+						</div>
+						<span class="descr">Винный кувшин</span>
+						<span class="product-code-item" data-productcode="2439725"></span>
+						<div class="rating-container">
+							<span class="rating">
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+							<span class="price">92 грн</span>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="product-box-item">
+						<div class="product-box-item-img">
+							<img src="img/Layer_12.png" alt="product">
+							<button class="add-to-basket"><span class="rotate">Добавить в корзину</span></button>
+						</div>
+						<span class="descr">Винный кувшин</span>
+						<span class="product-code-item" data-productcode="143972"></span>
+						<div class="rating-container">
+							<span class="rating">
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+							<span class="price">86 грн</span>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="product-box-item">
+						<div class="product-box-item-img">
+							<img src="img/Layer_12.png" alt="product">
+							<button class="add-to-basket"><span class="rotate">Добавить в корзину</span></button>
+						</div>
+						<span class="descr">Винный кувшин, кувшин винный</span>
+						<span class="product-code-item" data-productcode="6239725"></span>
+						<div class="rating-container">
+							<span class="rating">
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+							<span class="price">27 грн</span>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="product-box-item">
+						<div class="product-box-item-img">
+							<img src="img/Layer_12.png" alt="product">
+							<button class="add-to-basket"><span class="rotate">Добавить в корзину</span></button>
+						</div>
+						<span class="descr">Винный кувшин</span>
+						<span class="product-code-item" data-productcode="8439785"></span>
+						<div class="rating-container">
+							<span class="rating">
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+							<span class="price">124 грн</span>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="product-box-item">
+						<div class="product-box-item-img">
+							<img src="img/Layer_12.png" alt="product">
+							<button class="add-to-basket"><span class="rotate">Добавить в корзину</span></button>
+						</div>
+						<span class="descr">Винный кувшин</span>
+						<span class="product-code-item" data-productcode="2339725"></span>
+						<div class="rating-container">
+							<span class="rating">
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+								<span class="star"></span>
+							</span>
+							<span class="price">218 грн</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		<!-- Section about us -->
+		<section id="aboutUs" class="about-us">
+			<div class="big-titles">
+					<h2 class="def-big-title-opct">Marko</h2>
+					<h3 class="def-section-title">О компании</h3>
+			</div>
+
+				<div class="about-container">
+					<div class="left-col">
+						<img src="img/kartinocha.png" class="img-responsive" alt="about company">
+					</div>
+					<div class="right-col">
+						<h3 class="about-us-text-title">Мы знаем толк в керамике</h3>
+						<div class="flex">
+							<p>Производство керамики – это процесс, известный с давних времен, который заключается в создании большого ряда продукции преимущественно из естественных глин, в частности, в сочетании с добавками минеральной и органической природы.</p>
+							<ul class="advantages">
+								<li>Лучшее сырьё</li>
+								<li>Качество</li>
+								<li>Ассортимент</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<!-- Section banner -->
+		<section class="banner hidden-sm">
+			<div class="banner-container">
+				<h3>Получите подарок</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+				<button class="g-btn familiarize">Ознакомиться</button>
+			</div>
+		</section>
+
+	</section>
+
+	<!-- Section sales -->
+	<section class="sales">
+		<div class="big-titles">
+			<h2 class="def-big-title-opct">Sales</h2>
+			<h3 class="def-section-title">Акции</h3>
+		</div>
+		<div class="second-slick-slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+			<div class="item">
+				<div class="product-box-item">
+					<div class="product-box-item-img">
+						<img id="productBoxItemThumbnail" src="img/Layer_12.png" alt="product">
+						<button class="add-to-basket"><span class="rotate">Добавить в корзину</span></button>
+					</div>
+					<span class="descr">Винный кувшин</span>
+
+					<div class="rating-container">
+						<span class="rating">
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star"></span>
+						</span>
+						<span class="price">112 грн</span>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="product-box-item">
+					<div class="product-box-item-img">
+						<img src="img/Layer_12.png" alt="product">
+						<button class="add-to-basket"><span class="rotate">Добавить в корзину</span></button>
+					</div>
+					<span class="descr">Винный кувшин</span>
+
+					<div class="rating-container">
+						<span class="rating">
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star"></span>
+						</span>
+						<span class="price">112 грн</span>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="product-box-item">
+					<div class="product-box-item-img">
+						<img src="img/Layer_12.png" alt="product">
+						<button class="add-to-basket"><span class="rotate">Добавить в корзину</span></button>
+					</div>
+					<span class="descr">Винный кувшин, кувшин винный</span>
+
+					<div class="rating-container">
+						<span class="rating">
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star"></span>
+						</span>
+						<span class="price">112 грн</span>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="product-box-item">
+					<div class="product-box-item-img">
+						<img src="img/Layer_12.png" alt="product">
+						<button class="add-to-basket"><span class="rotate">Добавить в корзину</span></button>
+					</div>
+					<span class="descr">Винный кувшин, кувшин винный</span>
+
+					<div class="rating-container">
+						<span class="rating">
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star"></span>
+						</span>
+						<span class="price">112 грн</span>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="product-box-item">
+					<div class="product-box-item-img">
+						<img src="img/Layer_12.png" alt="product">
+						<button class="add-to-basket"><span class="rotate">Добавить в корзину</span></button>
+					</div>
+					<span class="descr">Винный кувшин, кувшин винный</span>
+
+					<div class="rating-container">
+						<span class="rating">
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star"></span>
+							<span class="star"></span>
+						</span>
+						<span class="price">112 грн</span>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<!-- Footer start -->
+	<footer class="footer">
+		<div class="footer-container">
+			<ul class="footer-menu">
+				<li class="scrollOneFullScreen"><a href="#header">Главная</a></li>
+				<li><a href="#">Каталог</a></li>
+				<li class="scrollOneFullScreen"><a href="#header">Контакты</a></li>
+				<li class="scrollOneFullScreen"><a href="#aboutUs">О нас</a></li>
+			</ul>
+			<div class="footer-bar flex">
+				<div class="social-networks">
+					<span>Подпишитесь на нас</span>
+					<div class="flex">
+						<button>
+							<a href="#"></a>
+						</button>
+						<button>
+							<a href="#"></a>
+						</button>
+						<button>
+							<a href="#"></a>
+						</button>
+					</div>
+				</div>
+
+				<div class="footer-logo hidden-md">
+					<a href="#"><img src="img/logo.png" class="img-responsive" alt="keramika-logo"></a>
+				</div>
+
+				<div class="newsletter-subscription">
+					<form action="">
+						<span>Подпишитесь на рассылку</span>
+						<span class="error-message hide">Пожалуйста, заполните поле!</span>
+						<span class="error-message-email hide">Вы ввели не корректный E-mail!</span>
+						<div class="flex">
+							<input id="newsletterSubscriptionInput" type="text" placeholder="Ваш E-mail">
+							<button id="newsletterSubscriptionBtn" type="submit"></button>
+						</div>
+					</form>
+				</div>
+
+			</div>
+
+			<span class="company-advertisement">Дизайн и разработка</span>
+			<span><img src="img/logo_imag.png" alt="company-advertisement-img"></span>
+		</div>
+	</footer>
+
+	<script src="js/libs/jquery-3.2.1.min.js"></script>
+	<script src="js/libs/slick.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
