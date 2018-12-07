@@ -15,7 +15,7 @@ class MainAppClass {
         statisticsForWeek: []
       },
       // Максимальное количество задаваемых рандомных значений на пером уровне
-      maxQuantityRandomDataOmFirstLevel: 3,
+      maxQuantityRandomDataOmFirstLevel: 8,
       currentDate: '01.01.1976',
       numberOfTipsPerDay: 0
     };
